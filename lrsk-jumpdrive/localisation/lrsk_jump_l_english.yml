@@ -1,0 +1,10 @@
+﻿l_english:
+
+ LRSK_JUMP_DRIVE:0 "Accelerated Jump Drive"
+ LRSK_JUMP_DRIVE_DESC:1 "A Jump Drive that has had its reality reconfiguration calculator boosted to rip through space-time much more rapidly."
+ 
+ tech_lrsk_jump_drive:0 "Jump Calculator Acceleration"
+ tech_lrsk_jump_drive_desc:0 "Advanced quantum disentanglement calculators can enable Jump Drives to determine the necessary local space-time reconfiguration much more quickly.\n\n"
+  
+ TECH_UNLOCK_LRSK_JUMPDRIVE_TITLE:0 "§HUnlocks Component:§! $LRSK_JUMP_DRIVE$"
+ TECH_UNLOCK_LRSK_JUMPDRIVE_DESC:0 "§H$LRSK_JUMP_DRIVE$§!\n$LRSK_JUMP_DRIVE_DESC$"

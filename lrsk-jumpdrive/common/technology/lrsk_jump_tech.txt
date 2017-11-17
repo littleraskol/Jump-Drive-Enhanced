@@ -1,0 +1,74 @@
+##########################################################################
+# Jump Drive Enhanced
+# Technologies
+# Author: littleraskol
+##########################################################################
+
+@lrskjumpcost = 3000
+@lrskjumpwght = 45
+
+tech_lrsk_jump_drive = {
+	cost = @lrskjumpcost
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	is_rare = yes
+	#is_dangerous = yes
+	weight = @lrskjumpwght
+	prerequisites = { "tech_jump_drive_1" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.5
+			NOR = {
+				#research_leader = {
+				#	area = engineering
+				#	has_trait = "voidcraft"
+				#}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_technology = tech_psi_jump_drive_1
+		}
+	}
+	
+	ai_weight = {
+		factor = 20 #FTL techs are good
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_LRSK_JUMPDRIVE_TITLE"
+			desc = "TECH_UNLOCK_LRSK_JUMPDRIVE_DESC"
+		}
+	}
+}

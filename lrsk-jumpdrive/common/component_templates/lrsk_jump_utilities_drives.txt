@@ -1,0 +1,30 @@
+##########################################################################
+# Jump Drive Enhanced
+# Component Templates
+# Author: littleraskol
+##########################################################################
+
+@ftl4 = 30
+@power4 = -10
+
+utility_component_template = {
+	key = "LRSK_JUMP_DRIVE"
+	size = small
+	icon = "GFX_ship_part_lrsk_jump_drive"
+	icon_frame = 1
+	power = @power4
+	cost = @ftl4
+	ftl = jumpdrive
+	
+	ai_weight = {
+		weight = 4
+	}
+	
+	ship_modifier = {
+		ship_windup_mult = -0.5
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport }
+	prerequisites = { "tech_lrsk_jump_drive" }
+	component_set = "ftl_components"
+}
